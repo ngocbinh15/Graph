@@ -1,14 +1,13 @@
-# gui.py
 import sys
 import math
 import random
 import traceback
 from PyQt5.QtWidgets import (QApplication, QMainWindow, QPushButton, QWidget, 
-                             QVBoxLayout, QHBoxLayout, QLabel, QComboBox, 
-                             QTableWidget, QTableWidgetItem, QGraphicsView, 
-                             QGraphicsScene, QHeaderView, QMessageBox, QInputDialog,
-                             QSlider, QGroupBox, QListWidget, QSplitter, 
-                             QTabWidget, QFileDialog, QGridLayout, QTextEdit)
+                            QVBoxLayout, QHBoxLayout, QLabel, QComboBox, 
+                            QTableWidget, QTableWidgetItem, QGraphicsView, 
+                            QGraphicsScene, QHeaderView, QMessageBox, QInputDialog,
+                            QSlider, QGroupBox, QListWidget, QSplitter, 
+                            QTabWidget, QFileDialog, QGridLayout, QTextEdit)
 from PyQt5.QtCore import Qt, QTimer
 from PyQt5.QtGui import QPen, QBrush, QColor, QLinearGradient, QFont, QPainter, QPainterPath
 

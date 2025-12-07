@@ -1,6 +1,3 @@
-# algorithms.py
-
-# --- MÃ GIẢ (Dùng để hiển thị trên GUI) ---
 PSEUDOCODE = {
     'BFS': [ 
         "create queue Q; mark start visited", 

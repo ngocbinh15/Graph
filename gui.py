@@ -11,11 +11,9 @@ from PyQt5.QtWidgets import (QApplication, QMainWindow, QPushButton, QWidget,
 from PyQt5.QtCore import Qt, QTimer
 from PyQt5.QtGui import QPen, QBrush, QColor, QLinearGradient, QFont, QPainter, QPainterPath
 
-# Import từ các file khác
 from graph import Graph
 from algorithms import PSEUDOCODE
 
-# --- STYLE SHEET ---
 STYLESHEET = """
     QMainWindow { background-color: #f0f2f5; }
     QGroupBox { font-weight: bold; border: 1px solid #dcdcdc; border-radius: 6px; margin-top: 10px; background-color: white; }
@@ -39,7 +37,6 @@ STYLESHEET = """
     }
 """
 
-# --- GIAO DIỆN (VIEW components) ---
 class NodeItem:
     def __init__(self, v, x, y, r=24):
         self.v, self.x, self.y, self.r = v, x, y, r
@@ -131,7 +128,6 @@ class EdgeItem:
                 l = scene.addLine(ex, ey, ax, ay, QPen(c, 2))
                 l.setZValue(1); self.arrows.append(l)
 
-# --- TRÌNH ĐIỀU KHIỂN CHÍNH (CONTROLLER) ---
 class GraphSimulator(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -629,7 +625,7 @@ class GraphSimulator(QMainWindow):
 
         target_str = str(end) if end else "All"
         self.table_compare.setItem(row, 0, QTableWidgetItem(str(row + 1)))
-        self.table_compare.setItem(row, 1, QTableWidgetItem(f"{algo} ({start}→{target_str})"))
+        self.table_compare.setItem(row, 1, QTableWidgetItem(f"{algo} ({start}->{target_str})"))
         self.table_compare.setItem(row, 2, QTableWidgetItem(f"{V} / {E}"))
         self.table_compare.setItem(row, 3, QTableWidgetItem(str(steps)))
         self.table_compare.setItem(row, 4, QTableWidgetItem(str(cost) if cost > 0 else "-"))
